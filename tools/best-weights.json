@@ -1,0 +1,18 @@
+{
+  "gain": 46,
+  "vanish": 40,
+  "peak": 0.5,
+  "peakKnee": 380,
+  "peakQuad": 0.02,
+  "aboveLine": 9,
+  "aboveSoft": 1,
+  "softMargin": 90,
+  "stack": 0.5,
+  "stackLevel": 0.06,
+  "mass": 0,
+  "order": 14,
+  "pair": 5,
+  "pairLevel": 0.55,
+  "bigLow": 0,
+  "unsettled": 3
+}

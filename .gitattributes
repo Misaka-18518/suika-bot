@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.bin binary
+suika-bot.user.js -diff linguist-generated

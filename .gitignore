@@ -1,0 +1,19 @@
+# 依赖与浏览器（自行安装，见 AGENT-WINDOWS.md）
+node_modules/
+.browsers/
+.npmcache/
+
+# 生成物
+data/
+shots/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统
+.DS_Store
+Thumbs.db

@@ -1,0 +1,19 @@
+{
+  "name": "suika-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "合成大西瓜 AI 自动游玩 + 自我训练（价值网络）流水线",
+  "scripts": {
+    "play": "node run.mjs",
+    "watch": "node run.mjs --headed --keepOpen",
+    "play3": "node run.mjs --games 3 --autoRestart",
+    "build": "node tools/build.cjs",
+    "bench": "node tools/search.cjs --games 8 --passes 0 --profile full --maxDrops 600",
+    "tune": "node tools/tune.cjs",
+    "gen": "node tools/gen-data.cjs",
+    "parity": "node tools/parity-check.cjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.56.0"
+  }
+}
