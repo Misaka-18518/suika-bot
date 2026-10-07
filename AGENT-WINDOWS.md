@@ -132,6 +132,24 @@ node run.mjs --timeout 60
 node run.mjs --headed --keepOpen
 ```
 
+### 5.1 顺带：给用户装油猴脚本（浏览器里用）
+
+如果用户想要「在自己日常用的浏览器里打开游戏页就自动玩」，而不是让你用无头浏览器跑：
+
+1. 确认最终产物是最新的（会把模型内嵌进去，约 850KB）：
+```powershell
+node tools/build.cjs
+```
+2. 让用户装 [Tampermonkey](https://www.tampermonkey.net/) 扩展（Chrome/Edge 商店搜 Tampermonkey 即可）。
+3. 把脚本内容给他 —— 两种方式任选：
+   - **直接给文件**：把 `C:\suika\suika-bot.user.js` 拖进浏览器，Tampermonkey 会弹出安装页；
+   - **给在线地址**：打开 `https://raw.githubusercontent.com/Misaka-18518/suika-bot/main/suika-bot.user.js`，
+     Tampermonkey 会自动识别为脚本安装页。
+4. 装完打开 `https://dxg.calyx.site/g/FgyFHY2p`，左上角出现状态面板即成功。
+
+注意：**不要在页面加载完之后才粘贴脚本**。钩子必须在页面脚本之前装好 ——
+事后粘贴的话，面板会提示「请点一下再来一局」，点一下游戏里的「再来一局」按钮即可生效（会新建引擎）。
+
 ---
 
 ## 6. （可选，档位 B）GPU 训练环境
