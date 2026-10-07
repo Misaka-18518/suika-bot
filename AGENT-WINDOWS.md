@@ -136,9 +136,12 @@ node run.mjs --headed --keepOpen
 
 如果用户想要「在自己日常用的浏览器里打开游戏页就自动玩」，而不是让你用无头浏览器跑：
 
-1. 确认最终产物是最新的（会把模型内嵌进去，约 850KB）：
+仓库里自带的 `suika-bot.user.js` 是**精简版（46KB）**，用的是手工启发式 —— 开箱即用、更新检查也快。
+如果你已经训练出了自己的价值网络，想把它一起打进脚本：
+
 ```powershell
-node tools/build.cjs
+node tools/build.cjs              # 有 models/value.json 时会自动内嵌 → 脚本变成约 850KB
+node tools/build.cjs --no-model   # 强制不内嵌，回到 46KB
 ```
 2. 让用户装 [Tampermonkey](https://www.tampermonkey.net/) 扩展（Chrome/Edge 商店搜 Tampermonkey 即可）。
 3. 把脚本内容给他 —— 两种方式任选：
