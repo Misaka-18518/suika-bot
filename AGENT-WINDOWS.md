@@ -148,6 +148,8 @@ node tools/build.cjs --no-model   # 强制不内嵌，回到 46KB
    - **直接给文件**：把 `C:\suika\suika-bot.user.js` 拖进浏览器，Tampermonkey 会弹出安装页；
    - **给在线地址**：打开 `https://raw.githubusercontent.com/Misaka-18518/suika-bot/main/suika-bot.user.js`，
      Tampermonkey 会自动识别为脚本安装页。
+     ⚠️ 国内网络下 `raw.githubusercontent.com` 时通时不通，**优先用上面的本地文件方式**；
+     实在要用在线地址就先 `curl -I` 探一下，或者改用 ghproxy 之类的镜像。
 4. 装完打开 `https://dxg.calyx.site/g/FgyFHY2p`，左上角出现状态面板即成功。
 
 注意：**不要在页面加载完之后才粘贴脚本**。钩子必须在页面脚本之前装好 ——
